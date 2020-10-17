@@ -100,7 +100,7 @@ function rangedRandomVal(min, max) {
   return Math.floor(Math.random() * (max - min) + 1) + min;
 }
 
-// Helper function rangedRandomVal - generates a random number within min to max range but avoiding the range avoidMin to avoidMax
+// Helper function rangedRandomValAvoidingARange - generates a random number within min to max range but avoiding the range avoidMin to avoidMax
 function rangedRandomValAvoidingARange(min, max, avoidMin, avoidMax) {
   let randomValue = rangedRandomVal(min, max);
   return ((randomValue >= avoidMin) && (randomValue <= avoidMax)) ? rangedRandomValAvoidingARange(min, max, avoidMin, avoidMax) : randomValue;
